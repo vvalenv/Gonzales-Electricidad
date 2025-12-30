@@ -1,0 +1,152 @@
+/*Configuracion predeterminada (Mobile first)*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Rubik", sans-serif;
+    box-sizing: border-box;
+}
+
+/*Estructura ordenada de la pagina*/
+
+body {
+    display: grid;
+    height: 100vh;
+    background-color: #0155A6;
+    grid-template-rows: [fila-1] 84px [fila-2] auto [fila-3] 100px [fila-4]; /*espacio a ocupar de cada seccion*/
+}
+
+/*Barra de navegacion*/
+
+.navbar {
+    background-color: #ffff;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu { /*icono del menu con las tres lineas*/
+    cursor: pointer;
+    user-select: none;
+    margin-right: 10px;
+    transition: all 0.5s;
+}
+
+.rotacion {
+    transform: rotate(-90deg); /*para que rote el icono del menu*/
+}
+
+.links-ul { /*Lista de links*/
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%; /*escondida*/
+    bottom: 0;
+    background-color: #012a50;
+    transition: all 0.5s;
+}
+
+.links-li {
+    width: 100%;
+    text-align: center;
+}
+
+.links-li a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    padding: 20px 0;
+    font-size: 1.3rem;
+    outline: 0;
+    color: #ffff;
+}
+
+.links-li a:hover {
+    background-color: #ffff;
+    color: #0155A6;
+    transition: all 0.3s;
+}
+
+.logo { /*imagen del logo*/
+    width: 80px;
+    height: 80px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.mostrar {
+    left: -20%; /*mueve la lista oculta*/
+}
+
+/*Main*/
+
+
+/*Titulos*/
+
+.section_1 {
+    color: #ffff;
+    height: 100vh;
+}
+
+.div_titles {
+    padding: 10px;
+    height: 40%;
+    background-image: linear-gradient(to right, #0155A6, #0156a600), url('../img/fondo1.jpg');
+    background-size: cover; /* Ajusta la imagen */
+}
+
+/*Productos*/
+
+.subtitle_h3_p {
+    text-align: center;
+}
+
+/*Footer*/
+
+footer {
+    background-color: #ffff;
+    color: #0155A6;
+}
+
+
+/*Media querys (computadora y tablet)*/
+
+@media screen and (min-width: 800px) {
+
+    .menu {
+        display: none;
+    }
+
+    .logo {
+        margin-left: 10px;
+    }
+
+    .links-ul {
+        flex-direction: row;
+        width: 70%;
+        margin-right: 20px;
+        position: static;
+    }
+
+    .links-li {
+        background-color: #ffff;
+    }
+
+    .links-li a {
+        font-size: 1.1rem;
+        padding: 32px 0;
+        color: #0155A6;
+    }
+
+    .links-li a:hover {
+        background-color: #0155A6;
+        color: #ffff;
+    }
+
+}
