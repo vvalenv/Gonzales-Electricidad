@@ -1,14 +1,60 @@
 <section class="section_1">
-    <div class="div_titles">
-        <h1 class="title_h1">Electricidad Gonzales</h1>
-        <h2 class="subtitle_h2">Materiales electricos</h2>    
-        <h3 class="subtitle_h3">Electricidad, iluminacion y refrigeracion</h3>
+    <h1 class="title_h1">Electricidad Gonzales</h1>
+    <h2 class="subtitle_h2">Materiales electricos</h2>    
+    <h3 class="subtitle_h3">Electricidad, iluminacion y refrigeracion</h3>
+</section>
+<section class="section_2">
+    <h3 class="subtitle_h3_p">Productos</h3>
+    <div class="carrousel">
+        <!--boton para deslizar a la izquierda-->
+        <button class="carrousel_arrow carrousel_prev" id="left" data-button="left" onclick="App.processingButton(event)">
+            <img src="../img/icons/left.png" alt="left">
+        </button>
+        <div class="carrousel_list" id="track">
+            <!-- SEPARACION -->
+            <div class="carrousel_element">
+                <img src="../img/img_products/producto1.jpg" alt="producto 1" class="img_carrousel">
+                <div class="carrousel_text">
+                    <p class="nombreP_carrousel">Nombre P</p>
+                    <a href="#" class="link_details_car">Ver mas</a>
+                </div>
+            </div>
+            <!-- SEPARACION -->
+             <div class="carrousel_element">
+                <img src="../img/img_products/producto2.jpg" alt="producto 1" class="img_carrousel">
+                <div class="carrousel_text">
+                    <p class="nombreP_carrousel">Nombre P</p>
+                    <a href="#" class="link_details_car">Ver mas</a>
+                </div>
+            </div>
+            <!-- SEPARACION -->
+            <div class="carrousel_element">
+                <img src="../img/img_products/producto3.jpeg" alt="producto 1" class="img_carrousel">
+                <div class="carrousel_text">
+                    <p class="nombreP_carrousel">Nombre P</p>
+                    <a href="#" class="link_details_car">Ver mas</a>
+                </div>
+            </div>
+            <!-- SEPARACION -->
+            <div class="carrousel_element">
+                <img src="../img/img_products/producto4.jpeg" alt="producto 4" class="img_carrousel">
+                <div class="carrousel_text">
+                    <p class="nombreP_carrousel">Nombre P</p>
+                    <a href="#" class="link_details_car">Ver mas</a>
+                </div>
+            </div>
+        </div>
+        <button class="carrousel_arrow carrousel_next" id="right" data-button="right" onclick="App.processingButton(event)">
+            <img src="../img/icons/right.png" alt="right">
+        </button>
     </div>
-    <div class="div_categories">
-        <h3 class="subtitle_h3_p">Productos</h3>
-        <h4 class="categories_h4">Electricidad</h4>
-        <h4 class="categories_h4">Aperturas</h4>
-        <h4 class="categories_h4">Cortinas</h4>
-        <h4 class="categories_h4"></h4>
-    </div>      
+</section> 
+<section class="section_3">
+    <p class="p_pay">Medios de pago</p>
+    <ul class="ul_pay">
+        <li class="li_pay">Tarjetas de credito (3 cuotas sin interes)</li>
+        <li class="li_pay">Tarjetas de debito (10% de descuento)</li>
+        <li class="li_pay">Transferencias (10% de descuento)</li>
+        <li class="li_pay">Efectivo (15% de descuento)</li>
+    </ul>
 </section>
