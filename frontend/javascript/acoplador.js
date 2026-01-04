@@ -10,9 +10,9 @@ function loadComponents(id, path) {
         .catch(error => console.error("Error:", error));
 }
 
-loadComponents("header","../html/header.html");
-loadComponents("main","../html/main.html");
-loadComponents("footer","../html/footer.html");
+loadComponents("header","html/header.html");
+loadComponents("main","html/main.html");
+loadComponents("footer","html/footer.html");
 document.addEventListener("click", function(event) {
     // Verificamos si lo que se clickeó es el botón de menú
     if (event.target.closest("#menu")) {
