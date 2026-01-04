@@ -197,6 +197,10 @@ h1,h2,h3,h4 {
 
 .carrousel_text {
    margin-top: 10px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
 }
 
 .nombreP_carrousel {
