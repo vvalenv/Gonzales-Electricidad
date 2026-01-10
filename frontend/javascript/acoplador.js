@@ -1,7 +1,12 @@
+import { initSwiper } from './carrousel.js';
+import { UIController } from './UIController.js';
+const ui = new UIController();
+
 function loadComponents(id, path) {
-    fetch(path)
+    // Agregamos el "return" para poder encadenar el .then() fuera
+    return fetch(path) 
         .then(response => {
-            if (!response.ok) throw new Error("Error al cargar el archivo");
+            if (!response.ok) throw new Error("Error al cargar " + path);
             return response.text();
         })
         .then(data => {
@@ -11,16 +16,10 @@ function loadComponents(id, path) {
 }
 
 loadComponents("header","frontend/html/header.html");
-loadComponents("main","frontend/html/main.html");
-loadComponents("footer","frontend/html/footer.html");
-document.addEventListener("click", function(event) {
-    // Verificamos si lo que se clickeó es el botón de menú
-    if (event.target.closest("#menu")) {
-        const links = document.querySelector("#links");
-        const menu = document.querySelector("#menu");
-        if (links) {
-            links.classList.toggle("mostrar");
-            menu.classList.toggle("rotacion");
-        }
-    }
+loadComponents("main", "frontend/html/main.html").then(() => {
+    initSwiper();
+    // Iniciamos lo que ya existe (como el navbar si está en el index fijo)
+    ui.init();
+    ui.applyCardEffects();
 });
+loadComponents("footer","frontend/html/footer.html");

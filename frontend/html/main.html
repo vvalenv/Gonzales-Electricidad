@@ -5,48 +5,59 @@
 </section>
 <section class="section_2">
     <h3 class="subtitle_h3_p">Productos</h3>
-    <div class="carrousel">
-        <!--boton para deslizar a la izquierda-->
-        <button class="carrousel_arrow carrousel_prev" id="left" data-button="left" onclick="App.processingButton(event)">
-            <img src="frontend/img/icons/left.png" alt="left">
-        </button>
-        <div class="carrousel_list" id="track">
-            <!-- SEPARACION -->
-            <div class="carrousel_element">
-                <img src="frontend/img/img_products/producto1.jpg" alt="producto 1" class="img_carrousel">
-                <div class="carrousel_text">
-                    <p class="nombreP_carrousel">Nombre P</p>
-                    <a href="#" class="link_details_car">Ver mas</a>
+    <div class="carrousel swiper">
+        <div class="carrousel_list swiper-wrapper">
+                <div class="carrousel_element swiper-slide">
+                    <div class="carrousel_content">
+                        <img src="frontend/img/img_products/producto1.jpg" alt="producto 1" class="img_carrousel">
+                        <div class="text_wrapper_carrousel">
+                            <p class="nombreP_carrousel">Electricidad</p>
+                            <p class="desc_carrousel">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, ex consequatur</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="carrousel_element swiper-slide">
+                    <div class="carrousel_content">
+                        <img src="frontend/img/img_products/producto2.jpg" alt="producto 2" class="img_carrousel">
+                        <div class="text_wrapper_carrousel">
+                            <p class="nombreP_carrousel">Iluminacion</p>
+                            <p class="desc_carrousel">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, ex consequatur</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="carrousel_element swiper-slide">
+                    <div class="carrousel_content">
+                        <img src="frontend/img/img_products/producto3.jpeg" alt="producto 3" class="img_carrousel">
+                        <div class="text_wrapper_carrousel">
+                            <p class="nombreP_carrousel">Refrigeracion</p>
+                            <p class="desc_carrousel">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, ex consequatur</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="carrousel_element swiper-slide">
+                    <div class="carrousel_content">
+                        <img src="frontend/img/img_products/producto4.jpeg" alt="producto 4" class="img_carrousel">
+                        <div class="text_wrapper_carrousel">
+                            <p class="nombreP_carrousel">PVC</p>
+                            <p class="desc_carrousel">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, ex consequatur</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carrousel_element swiper-slide">
+                    <div class="carrousel_content">
+                        <img src="frontend/img/img_products/producto5.jpeg" alt="producto 5" class="img_carrousel">
+                        <div class="text_wrapper_carrousel">
+                            <p class="nombreP_carrousel">Caños</p>
+                            <p class="desc_carrousel">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, ex consequatur</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- SEPARACION -->
-             <div class="carrousel_element">
-                <img src="frontend/img/img_products/producto2.jpg" alt="producto 1" class="img_carrousel">
-                <div class="carrousel_text">
-                    <p class="nombreP_carrousel">Nombre P</p>
-                    <a href="#" class="link_details_car">Ver mas</a>
-                </div>
-            </div>
-            <!-- SEPARACION -->
-            <div class="carrousel_element">
-                <img src="frontend/img/img_products/producto3.jpeg" alt="producto 1" class="img_carrousel">
-                <div class="carrousel_text">
-                    <p class="nombreP_carrousel">Nombre P</p>
-                    <a href="#" class="link_details_car">Ver mas</a>
-                </div>
-            </div>
-            <!-- SEPARACION -->
-            <div class="carrousel_element">
-                <img src="frontend/img/img_products/producto4.jpeg" alt="producto 4" class="img_carrousel">
-                <div class="carrousel_text">
-                    <p class="nombreP_carrousel">Nombre P</p>
-                    <a href="#" class="link_details_car">Ver mas</a>
-                </div>
-            </div>
-        </div>
-        <button class="carrousel_arrow carrousel_next" id="right" data-button="right" onclick="App.processingButton(event)">
-            <img src="frontend/img/icons/right.png" alt="right">
-        </button>
+             <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
     </div>
 </section> 
 <section class="section_3">

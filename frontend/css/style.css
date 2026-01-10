@@ -12,6 +12,7 @@
 body {
     display: grid;
     background-color: #0155A6;
+    overflow-x: hidden;
     grid-template-rows: [fila-1] 84px [fila-2] auto [fila-3] 100px [fila-4]; /*espacio a ocupar de cada seccion*/
 }
 
@@ -28,7 +29,7 @@ body {
 .menu { /*icono del menu con las tres lineas*/
     cursor: pointer;
     user-select: none;
-    margin-right: 10px;
+    margin-right: 1em;
     transition: all 0.5s;
 }
 
@@ -89,6 +90,13 @@ body {
 main {
     display: grid;
     grid-template-rows: [fila-1] auto [fila-2] auto [fila-3];
+    width: 100%;
+    max-width: 100vw;
+}
+
+section {
+    width: 100%;
+    position: relative;
 }
 
 /*Titulos*/
@@ -96,7 +104,7 @@ main {
 .section_1 {
     color: #ffff;
     height: 60vh;
-    padding: 10px;
+    padding: 1em;
     background-image: linear-gradient(to right, #0155A6, #00000000 140%), url('../img/fondo1.jpg');
     background-size: cover; /* Ajusta la imagen */
 }
@@ -123,9 +131,9 @@ h1,h2,h3,h4 {
 
 .section_2 {
     color: #ffff;
-    height: 70vh;
     display: flex;
-    flex-flow: column nowrap;
+    min-height: 90vh;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -135,93 +143,74 @@ h1,h2,h3,h4 {
     font-size: 2rem;
 }
 
-.carrousel {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: fit-content;
-    height: 320px;
-    max-width: 90vw;
+.swiper {
+    width: 95%;
+    max-width: 100vw;
     overflow: hidden;
-    position: relative;
-    margin: auto;
+    height: 80%
 }
 
-.carrousel_arrow {
-    border-radius: 200px;
-    box-shadow: 5px 5px 10px #111111;
-    background-color: #fff;
-    border: none;
-    height: 36px;
-    cursor: pointer;
-    position: absolute;
-    z-index: 4;
-    text-align: center;
+.swiper-wrapper {
+    width: 90%;
 }
 
-.carrousel_prev {
-    left: 3%;
+.swiper-slide {
+    display: flex !important;
+    justify-content: center; /* Centra la card horizontalmente */
+    align-items: center;     /* Centra la card verticalmente si hay altura extra */
 }
 
-.carrousel_next {
-    right: 3%;
-}
-
-.carrousel_list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    left: 0;
-    top: 0;
-}
-
-.carrousel_element {
-    margin: 0 10px;
-    position: relative;
-    height: 300px;
-    width: 250px;
-    color: #000;
+.carrousel_content {
     background-color: #6289ae8b;
-    padding: 10px;
-    float: left;
+    padding: 20px;
+    width: 90%;      /* Cambia 300px por un porcentaje para que sea flexible */
+    max-width: 300px; /* Pero que no crezca más de 300px */
     display: flex;
     align-items: center;
     flex-direction: column;
-    box-shadow: 5px 5px 10px #111111;
     border-radius: 15px;
-    transition: .5 ease-in-out;
+    user-select: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    border: 2px solid transparent;
+    box-shadow: 0 5px 10px #1d1d1d;
 }
 
-.carrousel_text {
-   margin-top: 10px;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
+.text_wrapper_carrousel {
+    display: flex;
+    align-items: flex-start;
+    flex-flow: column nowrap;
 }
 
 .nombreP_carrousel {
-    font-size: 1.4rem;
-    color: #fff;
+    font-size: 1.3rem;
+    margin: 0.8em 0;
+    color: #521707;
+    background-color: #ee4415aa;
+    border-radius: 20px;
+    padding: 0.3em;
 }
 
-.link_details_car {
-    list-style: none;
-    text-decoration: none;
+.desc_carrousel {
     font-size: 1.1rem;
 }
 
 .img_carrousel {
-    width: 90%;
-    height: 80%;
+    width: 100%;
+    height: 60%;
+    aspect-ratio: 10/9;
     object-fit: cover;
     border-radius: 15px;
 }
 
 /*Seccion 3*/
+
+.section_3 {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+}
 
 .p_pay {
     font-size: 1.8rem;
@@ -239,7 +228,7 @@ h1,h2,h3,h4 {
     margin: 20px 0 0 10px;
     text-align: center;
     color: #fff;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 /*Footer*/
@@ -251,7 +240,7 @@ footer {
 
 .p_footer {
     padding: 10px 0 0 10px;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
 }
 
 .div_icons {
@@ -293,4 +282,15 @@ footer {
         color: #ffff;
     }
 
+    /*MAIN*/
+
+    .swiper {
+        width: 70%;
+    }
+
+    /*FOOTER*/
+
+    .p_footer {
+        font-size: 1.3rem;
+    }
 }
