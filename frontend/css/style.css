@@ -105,7 +105,7 @@ section {
     color: #ffff;
     height: 60vh;
     padding: 1em;
-    background-image: linear-gradient(to right, #0155A6, #00000000 140%), url('../img/fondo1.jpg');
+    background-image: linear-gradient(to right, #0155A6, #00000000 140%), url('/frontend/img/fondo1.jpg');
     background-size: cover; /* Ajusta la imagen */
 }
 

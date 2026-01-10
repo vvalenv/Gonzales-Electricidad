@@ -15,11 +15,12 @@ function loadComponents(id, path) {
         .catch(error => console.error("Error:", error));
 }
 
-loadComponents("header","public/frontend/html/header.html");
-loadComponents("main","public/frontend/html/main.html").then(() => {
-    initSwiper();
+loadComponents("header","frontend/html/header.html").then(()=>{
     // Iniciamos lo que ya existe (como el navbar si está en el index fijo)
     ui.init();
+});
+loadComponents("main","frontend/html/main.html").then(() => {
+    initSwiper();
     ui.applyCardEffects();
 });
-loadComponents("footer","public/frontend/html/footer.html");
+loadComponents("footer","frontend/html/footer.html");
