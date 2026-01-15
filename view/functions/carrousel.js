@@ -1,9 +1,6 @@
-import 'swiper/css/bundle';
-import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.mjs';
 export function initSwiper() {
   const swiper = new Swiper('.swiper', {
-    modules: [Navigation, Pagination],
     loop: true,
     centeredSlides: true,
 

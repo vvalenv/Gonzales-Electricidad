@@ -87,7 +87,7 @@ body {
 
 /*Main*/
 
-main {
+.div_main {
     display: grid;
     grid-template-rows: [fila-1] auto [fila-2] auto [fila-3];
     width: 100%;

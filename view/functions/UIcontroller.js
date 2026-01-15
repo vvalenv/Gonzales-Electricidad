@@ -11,14 +11,31 @@ export class UIController {
 
     setupNavbarEvents() {
         const menuBtn = document.querySelector('.menu');
+        const logo = document.getElementById('logo');
         const linksUl = document.querySelector('.links-ul');
-
+        
         if (menuBtn) {
             menuBtn.addEventListener('click', () => {
                 menuBtn.classList.toggle('rotacion');
                 linksUl.classList.toggle('mostrar');
             });
         }
+
+        logo.addEventListener('click', () => {
+            window.location.href = '/';
+        });
+    }
+
+    setupFooterEvents() {
+        const ig = document.getElementById('ig');
+        const fc = document.getElementById('fc');
+        
+        ig.addEventListener("click", () => {
+            window.location.href = 'https://www.instagram.com/gonzalez_materialeselectricos';
+        });
+        fc.addEventListener("click", () => {
+            window.location.href = 'https://www.facebook.com/GonzalezTemElectricidadNecochea/';
+        });
     }
 
     // Método que podrías llamar después de un fetch exitoso
@@ -38,5 +55,12 @@ export class UIController {
                 }, 50);
             });
         });
+    }
+
+    setupBody() {
+        const body = document.getElementById('body');
+        if (body.scrollHeight < window.innerHeight) {
+            body.style.minHeight = '100vh';
+        }
     }
 }
