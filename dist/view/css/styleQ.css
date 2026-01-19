@@ -1,0 +1,21 @@
+.div_mainQ {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    height: 100%;
+    padding: 0 20px;
+    color: #fff;
+}
+
+.title_Q {
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 1.2em;
+}
+
+.desc_Q {
+    font-size: 1.3rem;
+    text-align: center;
+}
