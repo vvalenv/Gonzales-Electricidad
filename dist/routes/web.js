@@ -2,19 +2,19 @@ import { initDef, initIndex } from '../view/functions/indexFunctions.js';
 
 const routes = {
     '/': { 
-        template: '/view/html/main.html', 
+        template: '/main.html', 
         init: initIndex
     },
     '/QuienesSomos': { 
-        template: '/view/html/mainQ.html',
+        template: '/mainQ.html',
         init: initDef
     },
     '/Contacto': { 
-        template: '/view/html/mainC.html',
+        template: '/mainC.html',
         init: initDef
     },
     '/Login': { 
-        template: '/view/html/login.html',
+        template: '/mainL.html',
         init: initDef
     }
 };
