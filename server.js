@@ -15,10 +15,8 @@ app.use(cors());
 
 // 2. Body Parser: Express usa JSON en el body de las peticiones (POST/PUT/DELETE)
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'dist')));
-app.use('/view', express.static(path.join(__dirname, 'dist/view')));
-app.use('/templates', express.static(path.join(__dirname, 'dist/view/html')));
-app.get('(*)', (req, res) => {
+
+app.get('/:any(.*)', (req, res) => {
     res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
