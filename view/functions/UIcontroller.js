@@ -21,7 +21,8 @@ export class UIController {
             });
         }
 
-        logo.addEventListener('click', () => {
+        logo.addEventListener('click', (e) => {
+            e.preventDefault();
             window.location.href = '/';
         });
     }

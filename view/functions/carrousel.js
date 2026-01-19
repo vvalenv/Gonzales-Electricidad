@@ -9,7 +9,7 @@ export function initSwiper() {
     // Si quieres que se vean varios slides:
     breakpoints: {
       640: { slidesPerView: 2 },
-      1024: { slidesPerView: 3 }
+      1024: { slidesPerView: 3, spaceBetween: 10 }
     },
 
     // If we need pagination

@@ -104,7 +104,7 @@ section {
 .section_1 {
     color: #ffff;
     height: 60vh;
-    padding: 1em;
+    padding: 1.2em;
     background-image: linear-gradient(to right, #0155A6, #00000000 140%), url('../img/fondo1.jpg');
     background-size: cover; /* Ajusta la imagen */
 }
@@ -132,22 +132,25 @@ h1,h2,h3,h4 {
 .section_2 {
     color: #ffff;
     display: flex;
-    min-height: 90vh;
+    min-height: 80vh;
     flex-direction: column;
     align-items: center;
 }
 
 .subtitle_h3_p {
     text-align: center;
-    margin: 1em 0;
+    margin: 2em 0 0.5em;
+    font-weight: 600;
     font-size: 2rem;
 }
+
+/*carrousel de productos*/
 
 .swiper {
     width: 95%;
     max-width: 100vw;
     overflow: hidden;
-    height: 80%
+    height: 90%
 }
 
 .swiper-wrapper {
@@ -162,13 +165,13 @@ h1,h2,h3,h4 {
 
 .carrousel_content {
     background-color: #6289ae8b;
-    padding: 20px;
+    padding: 0.8em;
     width: 90%;      /* Cambia 300px por un porcentaje para que sea flexible */
     max-width: 300px; /* Pero que no crezca más de 300px */
     display: flex;
     align-items: center;
     flex-direction: column;
-    border-radius: 15px;
+    border-radius: 10px;
     user-select: none;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
@@ -197,10 +200,9 @@ h1,h2,h3,h4 {
 
 .img_carrousel {
     width: 100%;
-    height: 60%;
-    aspect-ratio: 10/9;
+    aspect-ratio: 9/8;
     object-fit: cover;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 /*Seccion 3*/
@@ -213,8 +215,9 @@ h1,h2,h3,h4 {
 }
 
 .p_pay {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 0.5em;
     text-align: center;
     font-weight: 600;
     color: #fff;
@@ -247,6 +250,9 @@ footer {
     padding: 10px 0 0 10px;
 }
 
+.ig, .fc, .wpp {
+    cursor: pointer;
+}
 
 /*Media querys (computadora y tablet)*/
 
@@ -284,8 +290,16 @@ footer {
 
     /*MAIN*/
 
+    .section_2 {
+        height: 100vh;
+    }
+
     .swiper {
-        width: 70%;
+        width: 80%;
+    }
+
+    .img_carrousel {
+        aspect-ratio: 5/4;
     }
 
     /*FOOTER*/
