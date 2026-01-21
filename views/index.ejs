@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/styleQ.css">
+    <link rel="stylesheet" href="/css/styleC.css">
+    <link rel="stylesheet" href="/css/styleL.css">
+    <link rel="icon" href="/img/logo.png">
+    <title><%= titulo %></title>
+</head>
+<body id="body">
+    <header id="header"><%- include('header') %></header>
+    <main id="main"><%- include(seccion) %></main>
+    <footer id="footer"><%- include('footer') %></footer>
+    <% if (locals.script) { %>
+    <script src="/js/<%= script %>" type="module"></script>
+    <% } else { %>
+    <script src="/js/home.js" type="module"></script>
+    <% } %>
+</body>
+</html>

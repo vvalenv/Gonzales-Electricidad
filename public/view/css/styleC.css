@@ -6,7 +6,7 @@
     padding: 4em 0;
 }
 
-.login_container {
+.div_contact {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,7 +40,6 @@
     margin-bottom: 0.5em;
     background-color: #92badf;
     border: none;
-    border-radius: 5px;
     box-shadow: 2px 2px 5px #222222;
 }
 
@@ -57,6 +56,5 @@
     outline: none;
     color: #fff;
     padding: 5px;
-    border-radius: 5px;
     box-shadow: 2px 2px 5px #222222;
 }
