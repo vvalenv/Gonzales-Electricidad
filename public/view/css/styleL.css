@@ -19,6 +19,7 @@
 
 .title_login {
     font-size: 1.8rem;
+    font-weight: 500;
     margin-bottom: 1em;
 }
 
@@ -31,17 +32,20 @@
 
 .form_login input {
     padding: 5px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     outline: none;
+    border: none;
+    background-color: #92badf;
 }
 
 .form_login a {
     color: #0155A6;
     font-size: 1.1rem;
+    text-decoration: none;
 }
 
 .button_login {
-    background: linear-gradient(#0155A6, #4392dc);
+    background: linear-gradient(#0155A6, #0470d5);
     font-size: 1.3rem;
     border: 2px solid transparent;
     outline: none;
@@ -49,4 +53,13 @@
     padding: 0.3em;
     box-shadow: 2px 2px 5px #222222;
     cursor: pointer;
+}
+
+@media screen and (min-width: 800px) {
+    .login_container {
+        width: 50%;
+    }
+    .form_login {
+        gap: 0.6em;
+    }
 }

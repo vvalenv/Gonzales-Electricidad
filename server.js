@@ -35,6 +35,10 @@ app.get('/Login', (req,res) => {
     res.render('index',  {titulo: 'Login',seccion: 'mainL',script: 'default.js'});
 });
 
+app.get('/Registrarse', (req,res) => {
+    res.render('index',  {titulo: 'Registro',seccion: 'mainR',script: 'default.js'});
+});
+
 
 app.listen(PORT, () => {
     console.log(`Servidor Node.js corriendo en http://localhost:${PORT}`);

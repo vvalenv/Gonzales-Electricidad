@@ -11,33 +11,30 @@
     align-items: center;
     justify-content: center;
     flex-flow: column nowrap;
+    background-color: #002446;
+    padding: 2em 0;
+    width: 80%;
     color: #fff;
 }
 
 .title_contact {
     font-size: 1.8rem;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 1.2em;
 }
 
 .form_contact {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column nowrap;
+    display: grid;
+    gap: 0.8em;
+    width: 80%;
     font-size: 1.3rem;
-}
-
-.form_contact label {
-    margin-bottom: 0.5em;
 }
 
 .input_issue, .input_message {
     width: 100%;
     padding: 5px;
     outline: none;
-    font-size: 1.3rem;
-    margin-bottom: 0.5em;
+    font-size: 1.2rem;
     background-color: #92badf;
     border: none;
     box-shadow: 2px 2px 5px #222222;
@@ -45,16 +42,26 @@
 
 .input_message {
     resize: none;
-    height: 8em;
+    height: 9em;
 }
 
 .submit_contact {
-    background: linear-gradient(#0155A6, #4392dc);
+    background: linear-gradient(#0155A6, #0470d5);
     font-size: 1.3rem;
-    margin-top: 0.5em;
+    width: 100%;
     border: 2px solid transparent;
     outline: none;
     color: #fff;
     padding: 5px;
     box-shadow: 2px 2px 5px #222222;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 800px) {
+    .div_contact {
+        width: 50%;
+    }
+    .form_contact {
+        gap: 0.6em;
+    }
 }
