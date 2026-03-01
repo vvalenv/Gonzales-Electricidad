@@ -55,6 +55,10 @@ export class UIController {
                     card.style.borderColor = 'transparent'
                 }, 50);
             });
+            card.addEventListener('click', (e) => {
+                const cat = e.currentTarget.getAttribute("data-cat");
+                window.location.href=`/productos?cat=${cat}`;
+            });
         });
     }
 

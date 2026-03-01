@@ -132,7 +132,7 @@ h1,h2,h3,h4 {
 .section_2 {
     color: #ffff;
     display: flex;
-    min-height: 80vh;
+    min-height: 90vh;
     flex-direction: column;
     align-items: center;
 }
@@ -158,7 +158,7 @@ h1,h2,h3,h4 {
 }
 
 .swiper-slide {
-    display: flex !important;
+    display: flex;
     justify-content: center; /* Centra la card horizontalmente */
     align-items: center;     /* Centra la card verticalmente si hay altura extra */
 }
@@ -168,6 +168,7 @@ h1,h2,h3,h4 {
     padding: 0.8em;
     width: 90%;      /* Cambia 300px por un porcentaje para que sea flexible */
     max-width: 300px; /* Pero que no crezca más de 300px */
+    height: 420px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -186,16 +187,17 @@ h1,h2,h3,h4 {
 }
 
 .nombreP_carrousel {
-    font-size: 1.3rem;
-    margin: 0.8em 0;
-    color: #521707;
+    font-size: 1.5rem;
+    margin: 0.8em auto;
+    color: #501608;
     background-color: #ee4415aa;
     border-radius: 20px;
-    padding: 0.3em;
+    padding: 0.4em;
 }
 
 .desc_carrousel {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    text-align: center;
 }
 
 .img_carrousel {
@@ -295,7 +297,7 @@ footer {
     }
 
     .swiper {
-        width: 80%;
+        width: 80vw;
     }
 
     .img_carrousel {

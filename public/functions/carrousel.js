@@ -6,16 +6,9 @@ export function initSwiper() {
 
     slidesPerView: 1, // Empieza con 1 para probar
     spaceBetween: 20,
-    // Si quieres que se vean varios slides:
     breakpoints: {
       640: { slidesPerView: 2 },
-      1024: { slidesPerView: 3, spaceBetween: 10 }
-    },
-
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
+      1024: { slidesPerView: 3 }
     },
 
     // Navigation arrows
