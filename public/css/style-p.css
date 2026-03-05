@@ -125,7 +125,6 @@
 
 .div-p-detail {
     margin-top: 1em;
-    color: #fff;
 }
 
 .title-p-detail {
@@ -140,6 +139,9 @@
     margin-bottom: 2em;
     display: flex;
     flex-direction: column;
+    color: #000;
+    background-color: #fff;
+    border-radius: 10px;
 }
 
 .img-detail {
@@ -160,10 +162,14 @@
     .card-detail {
         max-width: 90vw;
         flex-direction: row;
+        padding-right: 1em;
+    }
+
+    .img-detail {
+        height: 320px;
     }
     
     .card-detail-text {
-        margin-top: 0;
         margin-left: 1em;
         font-size: 1.4rem;
     }
