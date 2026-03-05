@@ -151,6 +151,7 @@
 
 .card-detail-text {
     margin-top: 1em;
+    padding: 1em;
     font-size: 1.5rem;
 }
 
@@ -162,7 +163,6 @@
     .card-detail {
         max-width: 90vw;
         flex-direction: row;
-        padding-right: 1em;
     }
 
     .img-detail {
