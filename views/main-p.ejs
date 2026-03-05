@@ -1,17 +1,32 @@
 <section class="sec-p">
-    <h2 id="title-cat-p"><%- titulo %></h2>
+    <% if (typeof busqueda !== 'undefined') { %>
+        <button class="btn-search" id="btn-back" style="margin-top: 1em;">
+            <img class="icon-search" src="/img/icons/back.png" alt="volver">
+        </button>
+    <% } %>
+    <h2 class="title-cat-p" id="title-main-p"><%- titulo %></h2>
+    <form action="/productos/buscar" method="GET" class="form-search">
+        <input type="hidden" name="cat" value="<%= categoria %>">
+        <input type="search" id="input-search" name="q" class="input-search" placeholder="Buscar" autocomplete="off" required>
+        <button type="submit" class="btn-search">
+            <img src="/img/icons/search.png" class="icon-search" alt="buscar">
+        </button>
+    </form>
     <div class="container-p">
         <% if (productos && productos.length > 0) { %>
             <% productos.forEach(prod => { %>
-                <div class="card-producto">
-                    <img src="<%= prod.imagen %>" alt="<%= prod.nombre %>">
-                    <h3><%= prod.titulo %></h3>
-                    <p>Precio: $<%= prod.precio %></p>
-                    <button>Ver mas</button>
+                <div class="card-p">
+                    <img class="img-p" src="<%= prod.imagen %>" alt="<%= prod.nombre %>">
+                    <div class="content-text-p">
+                        <h3 class="title-p"><%= prod.titulo %></h3>
+                        <p class="precio-p">$<%= prod.precio %></p>
+                        <p class="desc-p"><%= prod.descripcion %></p>
+                        <a href="/productos/detalle/<%= categoria %>/<%= prod.id %>" class="link-p">Ver mas</a>
+                    </div>
                 </div>
             <% }); %>
         <% } else { %>
-            <p>No hay productos disponibles en esta categoría.</p>
+            <p class="no-products">No hay productos disponibles en esta categoría.</p>
         <% } %>
     </div>
 </section>

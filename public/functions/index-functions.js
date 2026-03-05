@@ -8,10 +8,5 @@ export const initIndex = () => {
     ui.setupNavbarEvents();
     ui.setupFooterEvents();
     ui.applyCardEffects();
-};
-
-export const initDef = () => {
-    ui.setupNavbarEvents();
-    ui.setupFooterEvents();
     ui.setupBody();
-}
+};

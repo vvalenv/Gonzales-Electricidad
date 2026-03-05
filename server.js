@@ -24,14 +24,17 @@ app.disable('x-powered-by');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req,res) => {
-    res.render('index',  {titulo: 'Inicio',seccion: 'main',script: 'home.js' });
+    res.render('index',  {titulo: 'Inicio',
+    seccion: 'main' });
 });
 
-app.get('/quienes_somos', (req,res) => {
-    res.render('index',  {titulo: '¿Quienes Somos?',seccion: 'main-q',script: 'default.js'});
+app.get('/quienes-somos', (req,res) => {
+    res.render('index',  {titulo: '¿Quienes somos?',
+    seccion: 'main-q'});
 });
 app.get('/contacto', (req,res) => {
-    res.render('index',  {titulo: 'Contacto',seccion: 'main-c',script: 'default.js'});
+    res.render('index',  {titulo: 'Contacto',
+    seccion: 'main-c'});
 });
 
 app.use('/productos', p_router);

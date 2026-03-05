@@ -1,0 +1,13 @@
+<button class="btn-search" id="btn-back" style="margin-top: 1em;">
+    <img class="icon-search" src="/img/icons/back.png" alt="volver">
+</button>
+<div class="div-p-detail">
+    <h2 class="title-p-detail"><%- titulo %></h2>
+    <div class="card-detail">
+        <img src="<%= producto.imagen %>" alt="imagen" class="img-detail">
+        <div class="card-detail-text">
+            <p class="precio-detail-p">Precio: $<%= producto.precio %></p>
+            <p class="desc-detail-p">Descripcion: <%= producto.descripcion %></p>
+        </div>
+    </div>
+</div>

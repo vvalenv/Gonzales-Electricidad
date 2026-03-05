@@ -11,9 +11,12 @@
 
 body {
     display: grid;
-    background-color: #0155A6;
     overflow-x: hidden;
     grid-template-rows: [fila-1] 84px [fila-2] auto [fila-3] 100px [fila-4]; /*espacio a ocupar de cada seccion*/
+}
+
+main {
+    background-image: linear-gradient(to right,#0155A6,#2594fd);
 }
 
 /*Barra de navegacion*/
@@ -62,7 +65,7 @@ body {
     text-decoration: none;
     display: block;
     width: 100%;
-    padding: 20px 0;
+    padding: 15px 0;
     font-size: 1.4rem;
     outline: 0;
     color: #ffff;
@@ -83,6 +86,15 @@ body {
 
 .mostrar {
     left: -20%; /*mueve la lista oculta*/
+}
+
+.submenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
 }
 
 /*Main*/
@@ -132,14 +144,14 @@ h1,h2,h3,h4 {
 .section_2 {
     color: #ffff;
     display: flex;
-    min-height: 90vh;
+    min-height: 80vh;
     flex-direction: column;
     align-items: center;
 }
 
 .subtitle_h3_p {
     text-align: center;
-    margin: 2em 0 0.5em;
+    margin: 1em 0 0.5em;
     font-weight: 600;
     font-size: 2rem;
 }
@@ -164,7 +176,7 @@ h1,h2,h3,h4 {
 }
 
 .carrousel_content {
-    background-color: #6289ae8b;
+    background-color: #fff;
     padding: 0.8em;
     width: 90%;      /* Cambia 300px por un porcentaje para que sea flexible */
     max-width: 300px; /* Pero que no crezca más de 300px */
@@ -175,24 +187,29 @@ h1,h2,h3,h4 {
     border-radius: 10px;
     user-select: none;
     cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.4s ease-in-out;
     border: 2px solid transparent;
     box-shadow: 0 5px 10px #1d1d1d;
+}
+
+.carrousel_content:hover {
+    background-color: #dddddd;
 }
 
 .text_wrapper_carrousel {
     display: flex;
     align-items: flex-start;
     flex-flow: column nowrap;
+    color: #0155A6;
 }
 
 .nombreP_carrousel {
     font-size: 1.5rem;
     margin: 0.8em auto;
-    color: #501608;
-    background-color: #ee4415aa;
-    border-radius: 20px;
-    padding: 0.4em;
+    color: #fff;
+    background-color: #02519a;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .desc_carrousel {
@@ -210,7 +227,7 @@ h1,h2,h3,h4 {
 /*Seccion 3*/
 
 .section_3 {
-    height: 70vh;
+    height: 50vh;
     display: flex;
     justify-content: center;
     flex-flow: column nowrap;
@@ -230,7 +247,7 @@ h1,h2,h3,h4 {
 }
 
 .li_pay {
-    margin: 20px 0 0 10px;
+    margin: 10px 0 0 10px;
     text-align: center;
     color: #fff;
     font-size: 1.2rem;
@@ -259,6 +276,7 @@ footer {
 /*Media querys (computadora y tablet)*/
 
 @media screen and (min-width: 800px) {
+    /*NAV*/
 
     .menu {
         display: none;
@@ -280,14 +298,35 @@ footer {
     }
 
     .links-li a {
-        font-size: 1.1rem;
-        padding: 32px 0;
+        font-size: 1.2rem;
+        padding: 30.5px 0;
         color: #0155A6;
     }
 
     .links-li a:hover {
         background-color: #0155A6;
         color: #ffff;
+    }
+
+    .container-submenu {
+        position: relative;
+    }
+
+    .submenu {
+        position: absolute;
+        width: 100%;
+        overflow: visible;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .container-submenu:hover .submenu {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .sub-links-li {
+        padding: 25px 0 !important;
     }
 
     /*MAIN*/

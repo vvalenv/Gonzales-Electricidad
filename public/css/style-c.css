@@ -12,14 +12,17 @@
     justify-content: center;
     flex-flow: column nowrap;
     background-color: #002446;
+    box-shadow: 2px 2px 5px #222222;
     padding: 2em 0;
     width: 80%;
-    color: #fff;
+    color: #92badf;
+    border-radius: 15px;
 }
 
 .title_contact {
     font-size: 1.8rem;
     font-weight: 500;
+    color: #92badf;
     margin-bottom: 1.2em;
 }
 
@@ -30,12 +33,14 @@
     font-size: 1.3rem;
 }
 
-.input_issue, .input_message {
+.input_issue, .input_message, .input_email {
     width: 100%;
-    padding: 5px;
+    padding: 10px;
+    border-radius: 15px;
     outline: none;
     font-size: 1.2rem;
     background-color: #92badf;
+    color: #002446;
     border: none;
     box-shadow: 2px 2px 5px #222222;
 }
@@ -51,8 +56,9 @@
     width: 100%;
     border: 2px solid transparent;
     outline: none;
-    color: #fff;
-    padding: 5px;
+    color: #92badf;
+    padding: 8px;
+    border-radius: 15px;
     box-shadow: 2px 2px 5px #222222;
     cursor: pointer;
 }
