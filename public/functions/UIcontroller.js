@@ -13,7 +13,6 @@ export class UIController {
             menuBtn.addEventListener('click', () => {
                 menuBtn.classList.toggle('rotacion');
                 linksUl.classList.toggle('mostrar');
-                console.log(menuBtn);
             });
         };
 
