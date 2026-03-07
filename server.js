@@ -24,8 +24,10 @@ app.disable('x-powered-by');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req,res) => {
-    res.render('index',  {titulo: 'Inicio',
-    seccion: 'main' });
+    res.render('index',  {
+        titulo: 'Agrupacion Gonzalez',
+        seccion: 'main' 
+    });
 });
 
 app.get('/quienes-somos', (req,res) => {
